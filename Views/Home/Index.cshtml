@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!-- NAVIGATION -->
+<nav class="fixed-top" id="navigation" style="top: -42px; opacity: 0;">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12 center">
+                <!-- LOGO -->
+                <a class="brand pull-left" href="./">
+                    <img src="~/Content/assets/images/logo.png" alt="Treble">
+                </a>
+                <!-- END LOGO -->
+                <!-- MOBILE MENU BUTTON -->
+                <div class="mobile-menu" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                <!-- END MOBILE MENU BUTTON -->
+                <!-- MAIN MENU -->
+                <ul id="main-menu" class="nav-collapse collapse">
+                    <li class="active"><a href="#page-welcome">Home</a></li>
+                    <li class=""><a href="#page-work">Work</a></li>
+                    <li><a href="~/Views/Home/About.cshtml">Sign In </a></li>
+                    <li><a href="~/Views/Account/Register.cshtml">Sign Up</a></li>
+                </ul>
+                <!-- END MAIN MENU -->
+                <!-- SOCIAL ICONS -->
+                <div class="social-icons hover-big pull-right">
+                    <a href="~/Views/Account/Register.cshtml" class="sicon-facebook"><i>Facebook</i></a>
+                    <a href="#" class="sicon-twitter"><i>Twitter</i></a>
+                    <a href="#" class="sicon-linkedin"><i>LinkedIn</i></a>
+                    <a href="#" class="sicon-youtube"><i>Youtube</i></a>
+                    <a href="#" class="sicon-pinterest"><i>Pinterest</i></a>
+                </div>
+                <!-- END SOCIAL ICONS -->
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END NAVIGATION -->
+<!-- PAGE | WELCOME -->
+<div class="pages white paralax page-welcome" id="page-welcome" style="background-position: 0% 0px;">
+    <div class="overlay"></div>
+    <!-- Centralized content -->
+    <div class="centralized" style="margin-top: -222.5px; margin-left: -615px; visibility: visible; opacity: 1;">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12 center">
+                    <!-- Animated logo -->
+                    <div class="logo">
+                        <div class="scrollNormal">
+                            <a href="#page-work">
+                                <img src="~/Content/assets/images/pages/welcome/logo_welcome.png" width="140" height="140" alt="Treble">
+                            </a>
+                        </div>
+                        <div class="scrollDown">
+                            <a href="#page-work">
+                                <img src="~/Content/assets/images/pages/welcome/logo2_welcome.png" width="140" height="140" alt="Treble">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="line-divider" id="welcome-messages">
+                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+                            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 96px;">
+                                <ul class="slides" style="width: auto; position: relative; top: -288px;">
+                                    <li style="float: none; list-style: none; position: relative; width: 1230px;" class="bx-clone">
+                                        <h1>Creative &amp; Fun</h1>
+                                    </li>
+                                    <li style="float: none; list-style: none; position: relative; width: 1230px;">
+                                        <h1>Hello Treble</h1>
+                                    </li>
+                                    <li style="float: none; list-style: none; position: relative; width: 1230px;">
+                                        <h1>Fresh &amp; Clean</h1>
+                                    </li>
+                                    <li style="float: none; list-style: none; position: relative; width: 1230px;">
+                                        <h1>Creative &amp; Fun</h1>
+                                    </li>
+                                    <li style="float: none; list-style: none; position: relative; width: 1230px;" class="bx-clone">
+                                        <h1>Hello Treble</h1>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p>One page responsive HTML5 template.</p>
+                    <div class="social-icons sicon-white bordered">
+                        <a href="#" class="sicon-facebook"><i>Facebook</i></a>
+                        <a href="#" class="sicon-twitter"><i>Twitter</i></a>
+                        <a href="#" class="sicon-linkedin"><i>LinkedIn</i></a>
+                        <a href="#" class="sicon-youtube"><i>Youtube</i></a>
+                        <a href="#" class="sicon-pinterest"><i>Pinterest</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PAGE | Welcome -->
+<div class="pages page-work" id="page-work">
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h4 class="line-divider">Work</h4>
+            <h1>Portfolio</h1>
+            <!-- Short desciption about Work in general -->
+            <div class="row">
+                <div class="span8 offset2">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sub menu -->
+            <!--
+            Params:
+                plugin-filter: Defines links for filtering.
+            -->
+            <nav class="submenu">
+                <ul>
+                    <li>
+                        <a href="#" class="plugin-filter active" data-filter="all">All</a>
+                    </li>
+                    <li>
+                        <a href="#" class="plugin-filter" data-filter="typography">Typography</a>
+                    </li>
+                    <li>
+                        <a href="#" class="plugin-filter" data-filter="illustration">Illustration</a>
+                    </li>
+                    <li>
+                        <a href="#" class="plugin-filter" data-filter="branding">Branding</a>
+                    </li>
+                    <li>
+                        <a href="#" class="plugin-filter" data-filter="photography">Photography</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- End Header -->
+
+       
+        <!-- Article -->
+        <article>
+            <!-- Portfolio items
+                Params:
+                    plugin-filter-elements: Defines items for filtering, each item has class which defines filter value.
+                    portfolio-items: Customise portfolio items for hover effect.
+            -->
+            <ul class="thumbnails plugin-filter-elements portfolio-items">
+                <li class="span4 mix illustration branding mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_1.html" data-destination="portfolio-items" data-insert="before">
+                        <!-- Portfolio image -->
+                        <img src="http://placehold.it/390x300" alt="Treble">
+
+                        <!-- Portfolio name, activated on hover -->
+                        <div class="portfolio-overlay">
+                            <h4>Vita Worldwide</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix branding typography illustration mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_2.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>Kokong Magazine</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix photography illustration mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_3.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>Escape The Grid 2</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix photography mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_4.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>Avatar</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix photography typography branding mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_5.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>A Brighter Horizon</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix photography mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_6.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>The Travelers</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix illustration branding typography mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_7.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>Tron 3</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix photography illustration mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_8.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>Vimeo Staff Picke - Rio</h4>
+                        </div>
+                    </a>
+                </li>
+                <li class="span4 mix illustration branding mix_all" style="display: inline-block; opacity: 1;">
+                    <a href="#pages/portfolio/project_9.html" data-destination="portfolio-items" data-insert="before">
+                        <img src="http://placehold.it/390x300" alt="Treble">
+                        <div class="portfolio-overlay">
+                            <h4>Adobe Family. 1882</h4>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </article>
+
+
+        <!-- End Article -->
+        <!--Calendar-->
+        
+        <!--End Calendar-->
+        <!-- Footer -->
+        <footer>
+            <div class="show-more-cube">
+                <a href="#pages/portfolio/readmore.html" data-destination="plugin-filter-elements" data-insert="appendTo" data-action="remove">
+                    <span>Show<br>More</span>
+                </a>
+            </div>
+        </footer>
+        <!-- End footer -->
+    </div>
+</div>
+

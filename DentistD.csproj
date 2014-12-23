@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D3E8AA8-E761-488E-83A0-D64F20305A17}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DentistD</RootNamespace>
+    <AssemblyName>DentistD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="codebase\dhtmlxscheduler.css" />
+    <Content Include="codebase\dhtmlxscheduler.js" />
+    <Content Include="codebase\dhtmlxscheduler_classic.css" />
+    <Content Include="codebase\dhtmlxscheduler_flat.css" />
+    <Content Include="codebase\dhtmlxscheduler_glossy.css" />
+    <Content Include="codebase\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_grid_view.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_multisection.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_timeline.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_treetimeline.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_units.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_url.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_week_agenda.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="codebase\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="codebase\imgs\buttons.png" />
+    <Content Include="codebase\imgs\but_repeat.gif" />
+    <Content Include="codebase\imgs\calendar.gif" />
+    <Content Include="codebase\imgs\clock_big.gif" />
+    <Content Include="codebase\imgs\clock_small.gif" />
+    <Content Include="codebase\imgs\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs\controls.gif" />
+    <Content Include="codebase\imgs\databg.png" />
+    <Content Include="codebase\imgs\databg_now.png" />
+    <Content Include="codebase\imgs\export_ical.png" />
+    <Content Include="codebase\imgs\export_pdf.png" />
+    <Content Include="codebase\imgs\icon.png" />
+    <Content Include="codebase\imgs\images.png" />
+    <Content Include="codebase\imgs\loading.gif" />
+    <Content Include="codebase\imgs\resize_dots.png" />
+    <Content Include="codebase\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="codebase\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="codebase\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="codebase\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_dhx_terrace\controls.png" />
+    <Content Include="codebase\imgs_dhx_terrace\databg.png" />
+    <Content Include="codebase\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="codebase\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="codebase\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="codebase\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="codebase\imgs_dhx_terrace\resizing.png" />
+    <Content Include="codebase\imgs_flat\agenda_bg.gif" />
+    <Content Include="codebase\imgs_flat\arrow_left.png" />
+    <Content Include="codebase\imgs_flat\arrow_right.png" />
+    <Content Include="codebase\imgs_flat\but_repeat.gif" />
+    <Content Include="codebase\imgs_flat\calendar.gif" />
+    <Content Include="codebase\imgs_flat\clock.png" />
+    <Content Include="codebase\imgs_flat\clock_big.gif" />
+    <Content Include="codebase\imgs_flat\clock_small.gif" />
+    <Content Include="codebase\imgs_flat\close_icon.png" />
+    <Content Include="codebase\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_flat\controls.png" />
+    <Content Include="codebase\imgs_flat\databg.png" />
+    <Content Include="codebase\imgs_flat\databg_now.png" />
+    <Content Include="codebase\imgs_flat\export_ical.png" />
+    <Content Include="codebase\imgs_flat\export_pdf.png" />
+    <Content Include="codebase\imgs_flat\resize_dots.png" />
+    <Content Include="codebase\imgs_flat\resizing.png" />
+    <Content Include="codebase\imgs_glossy\blue_tab.png" />
+    <Content Include="codebase\imgs_glossy\blue_tab_wide.png" />
+    <Content Include="codebase\imgs_glossy\buttons.gif" />
+    <Content Include="codebase\imgs_glossy\but_repeat.gif" />
+    <Content Include="codebase\imgs_glossy\calendar.gif" />
+    <Content Include="codebase\imgs_glossy\clock_big.png" />
+    <Content Include="codebase\imgs_glossy\clock_small.png" />
+    <Content Include="codebase\imgs_glossy\collapse_expand_icon.gif" />
+    <Content Include="codebase\imgs_glossy\controlls5.png" />
+    <Content Include="codebase\imgs_glossy\databg.png" />
+    <Content Include="codebase\imgs_glossy\databg_now.png" />
+    <Content Include="codebase\imgs_glossy\event-bg.png" />
+    <Content Include="codebase\imgs_glossy\export_ical.png" />
+    <Content Include="codebase\imgs_glossy\export_pdf.png" />
+    <Content Include="codebase\imgs_glossy\icon.png" />
+    <Content Include="codebase\imgs_glossy\left-separator.png" />
+    <Content Include="codebase\imgs_glossy\left-time-bg.png" />
+    <Content Include="codebase\imgs_glossy\lightbox.png" />
+    <Content Include="codebase\imgs_glossy\loading.gif" />
+    <Content Include="codebase\imgs_glossy\move.png" />
+    <Content Include="codebase\imgs_glossy\multi-days-bg.png" />
+    <Content Include="codebase\imgs_glossy\second-top-days-bg.png" />
+    <Content Include="codebase\imgs_glossy\top-days-bg.png" />
+    <Content Include="codebase\imgs_glossy\top-separator.gif" />
+    <Content Include="codebase\imgs_glossy\white_tab.png" />
+    <Content Include="codebase\imgs_glossy\white_tab_wide.png" />
+    <Content Include="codebase\locale\locale_ar.js" />
+    <Content Include="codebase\locale\locale_be.js" />
+    <Content Include="codebase\locale\locale_ca.js" />
+    <Content Include="codebase\locale\locale_cn.js" />
+    <Content Include="codebase\locale\locale_cs.js" />
+    <Content Include="codebase\locale\locale_da.js" />
+    <Content Include="codebase\locale\locale_de.js" />
+    <Content Include="codebase\locale\locale_el.js" />
+    <Content Include="codebase\locale\locale_en.js" />
+    <Content Include="codebase\locale\locale_es.js" />
+    <Content Include="codebase\locale\locale_fi.js" />
+    <Content Include="codebase\locale\locale_fr.js" />
+    <Content Include="codebase\locale\locale_he.js" />
+    <Content Include="codebase\locale\locale_hu.js" />
+    <Content Include="codebase\locale\locale_id.js" />
+    <Content Include="codebase\locale\locale_it.js" />
+    <Content Include="codebase\locale\locale_jp.js" />
+    <Content Include="codebase\locale\locale_nb.js" />
+    <Content Include="codebase\locale\locale_nl.js" />
+    <Content Include="codebase\locale\locale_no.js" />
+    <Content Include="codebase\locale\locale_pl.js" />
+    <Content Include="codebase\locale\locale_pt.js" />
+    <Content Include="codebase\locale\locale_ro.js" />
+    <Content Include="codebase\locale\locale_ru.js" />
+    <Content Include="codebase\locale\locale_si.js" />
+    <Content Include="codebase\locale\locale_sk.js" />
+    <Content Include="codebase\locale\locale_sv.js" />
+    <Content Include="codebase\locale\locale_tr.js" />
+    <Content Include="codebase\locale\locale_ua.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_be.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_cn.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_cs.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_da.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_de.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_el.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_en.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_es.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_fi.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_fr.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_it.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_nb.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_nl.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_pl.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_pt.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_ro.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_ru.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_sk.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_sv.js" />
+    <Content Include="codebase\locale\recurring\locale_recurring_ua.js" />
+    <Content Include="codebase\locale\recurring\repeat_template_be.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_cn.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_de.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_el.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_en.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_es.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_fr.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_it.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_nl.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_ro.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_ru.html" />
+    <Content Include="codebase\locale\recurring\repeat_template_sk.html" />
+    <Content Include="codebase\sources\dhtmlxscheduler.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_grid_view.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multisection.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_timeline.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_treetimeline.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_units.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_url.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_week_agenda.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_classic.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_flat.css" />
+    <Content Include="codebase\sources\skins\dhtmlxscheduler_glossy.css" />
+    <Content Include="Content\assets\fonts\Chunkfive-webfont.svg" />
+    <Content Include="Content\assets\images\blog_structure.png" />
+    <Content Include="Content\assets\images\bootstrap-mdo-sfmoma-01.jpg" />
+    <Content Include="Content\assets\images\bootstrap-mdo-sfmoma-02.jpg" />
+    <Content Include="Content\assets\images\bootstrap-mdo-sfmoma-03.jpg" />
+    <Content Include="Content\assets\images\css\cls.png" />
+    <Content Include="Content\assets\images\css\divider.png" />
+    <Content Include="Content\assets\images\css\divider_more.png" />
+    <Content Include="Content\assets\images\css\divider_more_text.png" />
+    <Content Include="Content\assets\images\css\divider_q.png" />
+    <Content Include="Content\assets\images\css\divider_tw.png" />
+    <Content Include="Content\assets\images\css\glyphicons-halflings-white.png" />
+    <Content Include="Content\assets\images\css\glyphicons-halflings.png" />
+    <Content Include="Content\assets\images\css\icon_set.png" />
+    <Content Include="Content\assets\images\css\icon_set_over.png" />
+    <Content Include="Content\assets\images\css\overlay.png" />
+    <Content Include="Content\assets\images\css\pattern.png" />
+    <Content Include="Content\assets\images\css\plugins\bxslider\bx_loader.gif" />
+    <Content Include="Content\assets\images\css\plugins\bxslider\controls.png" />
+    <Content Include="Content\assets\images\css\sicon-set-white.png" />
+    <Content Include="Content\assets\images\css\sicon-set.png" />
+    <Content Include="Content\assets\images\css\thumb_over.png" />
+    <Content Include="Content\assets\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\assets\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\assets\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\assets\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\assets\images\ico\favicon.png" />
+    <Content Include="Content\assets\images\logo.png" />
+    <Content Include="Content\assets\images\pages\contact\map_bck.jpg" />
+    <Content Include="Content\assets\images\pages\features\about01.png" />
+    <Content Include="Content\assets\images\pages\features\about02.png" />
+    <Content Include="Content\assets\images\pages\features\about03.png" />
+    <Content Include="Content\assets\images\pages\features\q_bck.jpg" />
+    <Content Include="Content\assets\images\pages\twitter\tw_bck.jpg" />
+    <Content Include="Content\assets\images\pages\welcome\logo2_welcome.png" />
+    <Content Include="Content\assets\images\pages\welcome\logo_welcome.png" />
+    <Content Include="Content\assets\images\pages\welcome\welcome.jpg" />
+    <Content Include="Content\assets\images\page_strucutre.png" />
+    <Content Include="Content\assets\js\application.js" />
+    <Content Include="Content\assets\js\application\application-blog-list.min.js" />
+    <Content Include="Content\assets\js\application\application.min.js" />
+    <Content Include="Content\assets\js\application\source\application-blog-list.js" />
+    <Content Include="Content\assets\js\application\source\application.js" />
+    <Content Include="Content\assets\js\bootstrap.min.js" />
+    <Content Include="Content\assets\js\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\assets\js\bootstrap\html5shiv.js" />
+    <Content Include="Content\assets\js\bootstrap\source\bootstrap.js" />
+    <Content Include="Content\assets\js\html5shiv.js" />
+    <Content Include="Content\assets\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.bxslider.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.centralized.js" />
+    <Content Include="Content\assets\js\plugins\jquery.centralized.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.fixedonlater.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.hashloader.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.mixitup.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.nav.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.parallax-1.1.3.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.responsivevideos.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.scrollTo.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.tweet.min.js" />
+    <Content Include="Content\assets\js\plugins\jquery.tweetCarousel.min.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.bxslider.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.centralized.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.fixedonlater.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.hashloader.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.mixitup.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.nav.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.parallax-1.1.3.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.responsivevideos.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.scrollTo-1.4.3.1.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.tweet.js" />
+    <Content Include="Content\assets\js\plugins\source\jquery.tweetCarousel.js" />
+    <Content Include="Content\assets\js\prettify.js" />
+    <Content Include="Content\assets\style\bootstrap.css" />
+    <Content Include="Content\assets\style\docs.css" />
+    <Content Include="Content\assets\style\prettify.css" />
+    <Content Include="demo\calendar\100pctheight.html" />
+    <Content Include="demo\calendar\50columns.html" />
+    <Content Include="demo\calendar\allday.html" />
+    <Content Include="demo\calendar\crosshair.html" />
+    <Content Include="demo\calendar\datepicker.html" />
+    <Content Include="demo\calendar\day.html" />
+    <Content Include="demo\calendar\eventareas.html" />
+    <Content Include="demo\calendar\eventcustomization.html" />
+    <Content Include="demo\calendar\eventmenu.html" />
+    <Content Include="demo\calendar\eventselecting.html" />
+    <Content Include="demo\calendar\hierarchy.html" />
+    <Content Include="demo\calendar\index.html" />
+    <Content Include="demo\calendar\localization.html" />
+    <Content Include="demo\calendar\lunchbreak.html" />
+    <Content Include="demo\calendar\navigator.html" />
+    <Content Include="demo\calendar\nextprevious.html" />
+    <Content Include="demo\calendar\overnight.html" />
+    <Content Include="demo\calendar\resources.html" />
+    <Content Include="demo\calendar\rtl.html" />
+    <Content Include="demo\calendar\themegreen.html" />
+    <Content Include="demo\calendar\themetransparent.html" />
+    <Content Include="demo\calendar\themewhite.html" />
+    <Content Include="demo\calendar\week.html" />
+    <Content Include="demo\helpers\demo.css" />
+    <Content Include="demo\helpers\jquery-1.9.1.min.js" />
+    <Content Include="demo\helpers\media\elements.css" />
+    <Content Include="demo\helpers\media\layout.css" />
+    <Content Include="demo\helpers\media\layout\header-in.png" />
+    <Content Include="demo\helpers\media\layout\header.png" />
+    <Content Include="demo\helpers\media\layout\home\calendar-270x150.png" />
+    <Content Include="demo\helpers\media\layout\home\month-270x150.png" />
+    <Content Include="demo\helpers\media\layout\home\scheduler-270x150.png" />
+    <Content Include="demo\helpers\media\layout\li.png" />
+    <Content Include="demo\helpers\media\layout\main.png" />
+    <Content Include="demo\helpers\media\layout\shadow.png" />
+    <Content Include="demo\js\daypilot-all.min.js" />
+    <Content Include="demo\month\100pctheight.html" />
+    <Content Include="demo\month\datepicker.html" />
+    <Content Include="demo\month\eventareas.html" />
+    <Content Include="demo\month\eventcustomization.html" />
+    <Content Include="demo\month\eventmenu.html" />
+    <Content Include="demo\month\eventselecting.html" />
+    <Content Include="demo\month\index.html" />
+    <Content Include="demo\month\localization.html" />
+    <Content Include="demo\month\navigator.html" />
+    <Content Include="demo\month\nextprevious.html" />
+    <Content Include="demo\month\themegreen.html" />
+    <Content Include="demo\month\themetransparent.html" />
+    <Content Include="demo\month\themewhite.html" />
+    <Content Include="demo\month\weeks.html" />
+    <Content Include="demo\scheduler\index.html" />
+    <Content Include="demo\themes\calendar_green.css" />
+    <Content Include="demo\themes\calendar_transparent.css" />
+    <Content Include="demo\themes\calendar_white.css" />
+    <Content Include="demo\themes\month_green.css" />
+    <Content Include="demo\themes\month_transparent.css" />
+    <Content Include="demo\themes\month_white.css" />
+    <Content Include="demo\themes\navigator_green.css" />
+    <Content Include="demo\themes\navigator_transparent.css" />
+    <Content Include="demo\themes\navigator_white.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="plugins\twitter\788eb08c7c5165df8e9c871d10388de7.json" />
+    <Content Include="plugins\twitter\94fc45c5ae67944d7c61770bd3976a5d.json" />
+    <Content Include="plugins\twitter\f40a4fb14aebff883626bc6d6c4a059f.json" />
+    <Content Include="plugins\twitter\index.php" />
+    <Content Include="plugins\twitter\lib\tmhOAuth.php" />
+    <Content Include="plugins\twitter\lib\tmhUtilities.php" />
+    <Content Include="Content\assets\fonts\Chunkfive-webfont.eot" />
+    <Content Include="Content\assets\fonts\Chunkfive-webfont.ttf" />
+    <Content Include="Content\assets\fonts\Chunkfive-webfont.woff" />
+    <Content Include="codebase\connector\base_connector.php" />
+    <Content Include="codebase\connector\chart_connector.php" />
+    <Content Include="codebase\connector\combo_connector.php" />
+    <Content Include="codebase\connector\convert.php" />
+    <Content Include="codebase\connector\crosslink_connector.php" />
+    <Content Include="codebase\connector\dataprocessor.php" />
+    <Content Include="codebase\connector\dataview_connector.php" />
+    <Content Include="codebase\connector\data_connector.php" />
+    <Content Include="codebase\connector\db_adodb.php" />
+    <Content Include="codebase\connector\db_common.php" />
+    <Content Include="codebase\connector\db_excel.php" />
+    <Content Include="codebase\connector\db_filesystem.php" />
+    <Content Include="codebase\connector\db_mssql.php" />
+    <Content Include="codebase\connector\db_mysqli.php" />
+    <Content Include="codebase\connector\db_oracle.php" />
+    <Content Include="codebase\connector\db_pdo.php" />
+    <Content Include="codebase\connector\db_phpcake.php" />
+    <Content Include="codebase\connector\db_phpci.php" />
+    <Content Include="codebase\connector\db_phpyii.php" />
+    <Content Include="codebase\connector\db_postgre.php" />
+    <Content Include="codebase\connector\db_sasql.php" />
+    <Content Include="codebase\connector\db_sqlite.php" />
+    <Content Include="codebase\connector\db_sqlite3.php" />
+    <Content Include="codebase\connector\db_sqlsrv.php" />
+    <Content Include="codebase\connector\filesystem_item.php" />
+    <Content Include="codebase\connector\form_connector.php" />
+    <Content Include="codebase\connector\gantt_connector.php" />
+    <Content Include="codebase\connector\grid_config.php" />
+    <Content Include="codebase\connector\grid_connector.php" />
+    <Content Include="codebase\connector\keygrid_connector.php" />
+    <Content Include="codebase\connector\mixed_connector.php" />
+    <Content Include="codebase\connector\options_connector.php" />
+    <Content Include="codebase\connector\scheduler_connector.php" />
+    <Content Include="codebase\connector\strategy.php" />
+    <Content Include="codebase\connector\tools.php" />
+    <Content Include="codebase\connector\treedatagroup_connector.php" />
+    <Content Include="codebase\connector\treedatamultitable_connector.php" />
+    <Content Include="codebase\connector\treegridgroup_connector.php" />
+    <Content Include="codebase\connector\treegridmultitable_connector.php" />
+    <Content Include="codebase\connector\treegrid_connector.php" />
+    <Content Include="codebase\connector\treegroup_connector.php" />
+    <Content Include="codebase\connector\treemultitable_connector.php" />
+    <Content Include="codebase\connector\tree_connector.php" />
+    <Content Include="codebase\connector\update.php" />
+    <Content Include="codebase\connector\xss_filter.php" />
+    <Content Include="codebase\sources\dhtmlxscheduler.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_active_links.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_agenda_view.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_all_timed.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_collision.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_container_autoresize.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_cookie.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_editors.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_expand.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_grid_view.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_html_templates.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_key_nav.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_layer.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_limit.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_map_view.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_minical.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_monthheight.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multisection.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multiselect.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_multisource.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_mvc.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_offline.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_outerdrag.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_pdf.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_quick_info.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_readonly.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_recurring.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_serialize.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_timeline.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_tooltip.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_treetimeline.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_units.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_url.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_week_agenda.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_wp.js.map" />
+    <Content Include="codebase\sources\ext\dhtmlxscheduler_year_view.js.map" />
+    <Content Include="scripts\daypilot-all.min.js" />
+    <Content Include="scripts\min\daypilot-calendar.min.js" />
+    <Content Include="scripts\min\daypilot-common.min.js" />
+    <Content Include="scripts\min\daypilot-datepicker.min.js" />
+    <Content Include="scripts\min\daypilot-modal.min.js" />
+    <Content Include="scripts\min\daypilot-month.min.js" />
+    <Content Include="scripts\min\daypilot-navigator.min.js" />
+    <Content Include="scripts\src\daypilot-calendar.src.js" />
+    <Content Include="scripts\src\daypilot-common.src.js" />
+    <Content Include="scripts\src\daypilot-datepicker.src.js" />
+    <Content Include="scripts\src\daypilot-modal.src.js" />
+    <Content Include="scripts\src\daypilot-month.src.js" />
+    <Content Include="scripts\src\daypilot-navigator.src.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Calendar.cshtml" />
+    <None Include="Views\Shared\_HomePage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\assets\images\pages\about\" />
+    <Folder Include="Content\assets\images\pages\blog\" />
+    <Folder Include="Content\assets\images\pages\clients\" />
+    <Folder Include="Content\assets\images\pages\work\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12031</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11542/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

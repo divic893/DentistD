@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+
+    <!-- CSS Global Compulsory -->
+    @Styles.Render("~/Content/cssGlobal")
+
+    @*<link rel="stylesheet" href="content/assets/style/bootstrap.css">
+    <link rel="stylesheet" href="content/assets/style/docs.css">
+    <link rel="stylesheet href="content/assets/style/prettift.css">*@
+
+    </head>
+<body>
+  
+   
+
+
+
+        @RenderBody()
+        <hr />
+       
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    
+
+
+    @Scripts.Render("~/bundles/GlobalJS")
+    @*<script type="text/javascript" src="content/assets/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="content/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="content/assets/js/application/application.min.js"></script>*@
+
+
+    @*@Scripts.Render("~/bundles/AppJS")*@
+    @*<script type="text/javascript" src="content/assets/js/application/application.min.js"></script>*@
+
+    @Scripts.Render("~/bundles/bootstrapJS")
+    @*<script type="text/javascript" srce="content/assets/js/bootstrao/bootstrap.min.js"></script>*@
+
+    @Scripts.Render("~/bundles/applicatonJS")
+
+    @Scripts.Render("~/bundles/AppsourceJS")
+
+    @Scripts.Render("~/bundles/bootstrapJS")
+
+    @Scripts.Render("~/bundles/pluginsJS")
+
+    @Scripts.Render("~/bundles/pluginsSourceJS")
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
